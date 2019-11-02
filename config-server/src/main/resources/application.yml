@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: myconfigserver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  '*'
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:${discovery.port1}/eureka
+  instance:
+    appname: mymegaconfigserver
